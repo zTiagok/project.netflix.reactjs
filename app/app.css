@@ -3,6 +3,11 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --text-shadow-white: 0 35px 35px rgb(255, 255, 255, 1);
+}
+
+h2 {
+  @apply text-3xl font-bold
 }
 
 html,
