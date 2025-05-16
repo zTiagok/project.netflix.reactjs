@@ -1,3 +1,6 @@
+import { Languages } from "lucide-react";
+import { useRef } from "react";
+
 type LanguageDropdownProps = {
   currentLanguage: "English" | "Portuguese";
 };
@@ -5,18 +8,31 @@ type LanguageDropdownProps = {
 export default function LanguageDropdown({
   currentLanguage = "English",
 }: LanguageDropdownProps) {
-  const option1 = currentLanguage;
-  const option2 = !currentLanguage;
+  const selectRef = useRef<HTMLSelectElement>(null);
 
-  console.log("Option 1: ", option1);
-  console.log("Option 2: ", option2);
+  const option1 = currentLanguage == "English" ? "English" : "Inglês";
+  const option2 = currentLanguage == "English" ? "Portuguese" : "Português";
+
+  const handleLanguageDropdown = () => {
+    if (selectRef.current) {
+      selectRef.current.focus();
+      selectRef.current.showPicker();
+    }
+  };
 
   return (
-    <select className="w-fit rounded-md border-2 border-gray-600 p-1">
-      <option>{currentLanguage == "English" ? "English" : "Inglês"}</option>
-      <option>
-        {currentLanguage == "English" ? "Portuguese" : "Português"}
-      </option>
-    </select>
+    <div
+      onClick={handleLanguageDropdown}
+      className="flex h-10 w-fit items-center gap-2 rounded-md border-2 border-gray-600 px-2 text-white outline-1 outline-transparent transition-all focus-within:outline-white"
+    >
+      <Languages />
+      <select
+        ref={selectRef}
+        className="h-full outline-none select-none [&>*]:text-black"
+      >
+        <option>{option1}</option>
+        <option>{option2}</option>
+      </select>
+    </div>
   );
 }
