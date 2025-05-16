@@ -14,9 +14,9 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="bg-neutral-950 h-full pb-24">
-      <div className="px-10">
-        <header className="items-center flex justify-between bg-red-500 clear-start px-10">
+    <div className="h-full bg-neutral-950 pb-24">
+      <div className="">
+        <header className="clear-start flex items-center justify-between bg-red-500 px-10">
           <h1>Netflix</h1>
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
@@ -24,8 +24,8 @@ export default function Home() {
           </div>
         </header>
 
-        <main className="flex flex-col ">
-          <div className="bg-red-500/50 flex flex-col items-center">
+        <main className="flex flex-col">
+          <div className="flex flex-col items-center bg-red-500/50">
             <div>
               <h1>Unlimited movies, TV shows, and more</h1>
               <h2>Starts at BRL 20.90. Cancel anytime.</h2>
@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       <div className="px-38">
-        <section className="flex justify-between items-center">
+        <section className="flex items-center justify-between">
           <div className="flex flex-col">
             <h3>The Netflix you love for just BRL 20.90.</h3>
             <span>Enjoy savings and Netflix with a few ad breaks.</span>
@@ -48,7 +48,7 @@ export default function Home() {
 
         <section className="flex flex-col">
           <h2>Trending Now</h2>
-          <div className="flex gap-4 h-60">
+          <div className="flex h-60 gap-4">
             {Array.from({ length: 9 }).map((_data, index) => (
               <MovieCard id={index} key={`movie-card-${index}`} />
             ))}
@@ -154,15 +154,15 @@ export default function Home() {
 
         <ReadyToWatch />
 
-        <footer className="text-sm text-neutral-400 font-medium flex flex-col gap-8">
+        <footer className="flex flex-col gap-8 text-sm font-medium text-neutral-400">
           <p>
             Questions? Call{" "}
-            <span className="underline cursor-pointer select-none">
+            <span className="cursor-pointer underline select-none">
               0000 000 0000
             </span>{" "}
           </p>
 
-          <div className="grid grid-cols-4 grid-rows-5 gap-3 [&>*]:w-fit [&>*]:underline [&>*]:cursor-pointer select-none">
+          <div className="grid grid-cols-4 grid-rows-5 gap-3 select-none [&>*]:w-fit [&>*]:cursor-pointer [&>*]:underline">
             <span>FAQ</span>
             <span>Help Center</span>
             <span>Account</span>
@@ -196,7 +196,7 @@ export default function Home() {
                 href="https://github.com/zTiagok"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="underline cursor-pointer"
+                className="cursor-pointer underline"
               >
                 https://github.com/zTiagok
               </a>{" "}
