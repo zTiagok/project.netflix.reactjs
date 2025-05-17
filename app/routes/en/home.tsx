@@ -5,7 +5,7 @@ import MovieCard from "~/components/MovieCard";
 import ReadyToWatch from "~/components/ReadyToWatch";
 import type { Route } from "../../+types/root";
 
-import Logo from "~/../public/logo.png";
+import Logo from "~/assets/logo.png";
 
 export function meta({}: Route.MetaArgs) {
   return [
