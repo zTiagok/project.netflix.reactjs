@@ -48,8 +48,8 @@ export default function Home() {
 
         <section className="flex flex-col">
           <h2>Trending Now</h2>
-          <div className="flex h-60 gap-4">
-            {Array.from({ length: 9 }).map((_data, index) => (
+          <div className="flex h-[36vh] gap-4">
+            {Array.from({ length: 5 }).map((_data, index) => (
               <MovieCard id={index} key={`movie-card-${index}`} />
             ))}
           </div>
