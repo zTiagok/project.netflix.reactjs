@@ -103,27 +103,9 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-4 grid-rows-5 gap-3 select-none [&>*]:w-fit [&>*]:cursor-pointer [&>*]:underline">
-            <span>FAQ</span>
-            <span>Help Center</span>
-            <span>Account</span>
-            <span>Media Center</span>
-
-            <span>Investor Relations</span>
-            <span>Jobs</span>
-            <span>Redeem Gift Cards</span>
-            <span>Buy Gift Cards</span>
-
-            <span>Ways to Watch</span>
-            <span>Terms of Use</span>
-            <span>Privacy</span>
-            <span>Cookie Preferences</span>
-
-            <span>Corporate Information</span>
-            <span>Contact Us</span>
-            <span>Speed Test</span>
-            <span>Legal Notices</span>
-
-            <span>Only on Netflix</span>
+            {CommonData["footer-hiperlinks"].map((data, index) => (
+              <span key={`footer-hiperlink-${index}`}> {data.name} </span>
+            ))}
           </div>
 
           <LanguageDropdown currentLanguage="English" />
