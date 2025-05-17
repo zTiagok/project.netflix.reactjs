@@ -17,8 +17,12 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="h-full bg-neutral-950 pb-24">
-      <div className="">
-        <header className="clear-start flex items-center justify-between px-38 py-6">
+      <div
+        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] object-contain opacity-30`}
+      />
+
+      <div className={`relative h-screen`}>
+        <header className="clear-start flex items-center justify-between bg-linear-to-b from-black to-transparent px-38 py-6">
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
@@ -29,7 +33,7 @@ export default function Home() {
         </header>
 
         <main className="flex flex-col">
-          <div className="flex flex-col items-center bg-red-500/50">
+          <div className="flex flex-col items-center">
             <div>
               <h1>Unlimited movies, TV shows, and more</h1>
               <h2>Starts at BRL 20.90. Cancel anytime.</h2>
