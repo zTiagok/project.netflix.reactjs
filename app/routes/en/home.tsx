@@ -6,6 +6,7 @@ import ReadyToWatch from "~/components/ReadyToWatch";
 import type { Route } from "../../+types/root";
 
 import Logo from "~/assets/logo.png";
+import CommonData from "~/data/common.data.json";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -66,98 +67,29 @@ export default function Home() {
         <article className="flex flex-col">
           <h3>More Reasons to Join</h3>
           <div className="flex h-48 gap-3">
-            <AboutCard
-              title="Enjoy on your TV"
-              description="Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more."
-              image=""
-            />
-            <AboutCard
-              title="Download your shows to watch offline"
-              description="Save your favorites easily and always have something to watch."
-              image=""
-            />
-            <AboutCard
-              title="Watch everywhere"
-              description="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV."
-              image=""
-            />
-            <AboutCard
-              title="Create profiles for kids"
-              description="Send kids on adventures with their favorite characters in a space made just for them—free with your membership."
-              image=""
-            />
+            {CommonData["information-cards"].map((data, index) => (
+              <AboutCard
+                title={data.title}
+                description={data.description}
+                image={data.image}
+                key={index}
+              />
+            ))}
           </div>
         </article>
 
-        <article className="flex flex-col gap-2 select-none">
+        <article className="flex flex-col gap-2">
           <h3>Frequently Asked Questions</h3>
-          <DetailsDropdown title="What is Netflix?">
-            <p>
-              Netflix is a streaming service that offers a wide variety of
-              award-winning TV shows, movies, anime, documentaries, and more on
-              thousands of internet-connected devices.
-            </p>
-            <br />
-            <p>
-              You can watch as much as you want, whenever you want without a
-              single ad — all for one low monthly price. There's always
-              something new to discover and new TV shows and movies are added
-              every week!
-            </p>
-          </DetailsDropdown>
-
-          <DetailsDropdown title="How much does Netflix cost?">
-            <p>
-              Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
-              streaming device, all for one fixed monthly fee. Plans range from
-              BRL 20.90 to BRL 200.00 a month. No extra costs, no contracts.
-            </p>
-          </DetailsDropdown>
-
-          <DetailsDropdown title="Where can I watch?">
-            <p>
-              Watch anywhere, anytime, on an unlimited number of devices. Sign
-              in with your Netflix account to watch everywhere you go, including
-              the web, iOS, Android, Firefox, Chrome, and more.
-            </p>
-            <br />
-            <p>
-              You can also download your favorite shows with the iOS, Android,
-              or Windows 10 app. Use downloads to watch while you're offline and
-              without an internet connection. Take Netflix with you anywhere.
-            </p>
-          </DetailsDropdown>
-
-          <DetailsDropdown title="How do I cancel?">
-            <p>
-              Netflix is flexible. There are no pesky contracts and no
-              commitments. You can easily cancel your account online in two
-              clicks. There are no cancellation fees — start or stop your
-              account anytime.
-            </p>
-          </DetailsDropdown>
-
-          <DetailsDropdown title="What can I watch on Netflix?">
-            <p>
-              Netflix has an extensive library of feature films, documentaries,
-              TV shows, anime, award-winning Netflix originals, and more. Watch
-              as much as you want, anytime you want.
-            </p>
-          </DetailsDropdown>
-
-          <DetailsDropdown title="Is Netflix good for kids?">
-            <p>
-              The Netflix Kids experience is included in your membership to give
-              parents control while kids enjoy family-friendly TV shows and
-              movies in their own space.
-            </p>
-            <br />
-            <p>
-              Kids profiles come with PIN-protected parental controls that let
-              parents restrict the maturity rating of content kids can watch and
-              block specific titles you don't want kids to see.
-            </p>
-          </DetailsDropdown>
+          {CommonData["frequent-questions"].map((data, index) => (
+            <DetailsDropdown
+              title={data.title}
+              key={`frequently-questions-${index}`}
+            >
+              <p>{data.phrase_1}</p>
+              {data.phrase_2 && <br />}
+              <p>{data.phrase_2}</p>
+            </DetailsDropdown>
+          ))}
         </article>
 
         <ReadyToWatch />
