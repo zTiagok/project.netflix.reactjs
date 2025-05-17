@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div>
               <h1>Unlimited movies, TV shows, and more</h1>
-              <h2>Starts at BRL 20.90. Cancel anytime.</h2>
+              <h4>Starts at BRL 20.90. Cancel anytime.</h4>
             </div>
 
             <ReadyToWatch />
@@ -47,15 +47,15 @@ export default function Home() {
       <div className="px-38">
         <section className="flex items-center justify-between">
           <div className="flex flex-col">
-            <h3>The Netflix you love for just BRL 20.90.</h3>
-            <span>Enjoy savings and Netflix with a few ad breaks.</span>
+            <h4>The Netflix you love for just BRL 20.90.</h4>
+            <h5>Enjoy savings and Netflix with a few ad breaks.</h5>
           </div>
 
           <button>Learn More</button>
         </section>
 
         <section className="flex flex-col">
-          <h2>Trending Now</h2>
+          <h3>Trending Now</h3>
           <div className="flex h-[36vh] gap-4">
             {Array.from({ length: 5 }).map((_data, index) => (
               <MovieCard id={index} key={`movie-card-${index}`} />
@@ -64,7 +64,7 @@ export default function Home() {
         </section>
 
         <article className="flex flex-col">
-          <h2>More Reasons to Join</h2>
+          <h3>More Reasons to Join</h3>
           <div className="flex h-48 gap-3">
             <AboutCard
               title="Enjoy on your TV"
@@ -90,7 +90,7 @@ export default function Home() {
         </article>
 
         <article className="flex flex-col gap-2 select-none">
-          <h2>Frequently Asked Questions</h2>
+          <h3>Frequently Asked Questions</h3>
           <DetailsDropdown title="What is Netflix?">
             <p>
               Netflix is a streaming service that offers a wide variety of
