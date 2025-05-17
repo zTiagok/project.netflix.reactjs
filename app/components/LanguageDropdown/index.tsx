@@ -23,7 +23,7 @@ export default function LanguageDropdown({
   return (
     <div
       onClick={handleLanguageDropdown}
-      className="flex h-10 w-fit items-center gap-2 rounded-md border-2 border-gray-600 px-2 text-white outline-1 outline-transparent transition-all focus-within:outline-white"
+      className="flex h-10 w-fit items-center gap-2 rounded-md border border-white/30 bg-neutral-900 px-2 text-white outline-1 outline-transparent transition-all focus-within:outline-white"
     >
       <Languages />
       <select
