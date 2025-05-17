@@ -17,12 +17,14 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="h-full bg-neutral-950 pb-24">
-      <div>
+      <div className="">
         <header className="clear-start flex items-center justify-between px-38 py-6">
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
-            <button className="cursor-pointer">Sign In</button>
+            <button className="cursor-pointer rounded-md bg-red-600 px-4 transition-colors hover:bg-red-700">
+              Sign In
+            </button>
           </div>
         </header>
 
