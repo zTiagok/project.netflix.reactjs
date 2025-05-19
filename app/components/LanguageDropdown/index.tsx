@@ -1,4 +1,4 @@
-import { Languages } from "lucide-react";
+import { ChevronDown, Languages } from "lucide-react";
 import { useRef } from "react";
 
 type LanguageDropdownProps = {
@@ -28,11 +28,12 @@ export default function LanguageDropdown({
       <Languages />
       <select
         ref={selectRef}
-        className="h-full outline-none select-none [&>*]:text-black"
+        className="h-full appearance-none outline-none select-none [&>*]:text-black"
       >
         <option>{option1}</option>
         <option>{option2}</option>
       </select>
+      <ChevronDown size={16} />
     </div>
   );
 }

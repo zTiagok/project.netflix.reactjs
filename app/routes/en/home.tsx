@@ -19,11 +19,11 @@ export default function Home() {
   return (
     <div className="h-full bg-neutral-950 pb-24">
       <div
-        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] object-contain opacity-30`}
+        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] opacity-30`}
       />
 
-      <div className={`relative h-screen`}>
-        <header className="clear-start flex items-center justify-between bg-linear-to-b from-black to-transparent px-38 py-6">
+      <div className="relative h-screen bg-linear-to-b from-black/75 from-10% to-transparent to-20% px-38">
+        <header className="clear-start flex items-center justify-between py-6">
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
