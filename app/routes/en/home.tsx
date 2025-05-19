@@ -19,24 +19,26 @@ export default function Home() {
   return (
     <div className="h-full bg-neutral-950 pb-24">
       <div
-        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] opacity-30`}
+        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] opacity-20`}
       />
 
-      <div className="relative h-screen bg-linear-to-b from-black/75 from-10% to-transparent to-20% px-38">
+      <div className="relative flex h-screen flex-col bg-linear-to-b from-black/75 from-10% to-transparent to-20% px-38">
         <header className="clear-start flex items-center justify-between py-6">
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
-            <button className="cursor-pointer rounded-md bg-red-600 px-4 transition-colors hover:bg-red-700">
+            <button className="cursor-pointer rounded-md bg-red-600 px-4 transition-colors hover:bg-red-700 active:bg-red-900">
               Sign In
             </button>
           </div>
         </header>
 
-        <main className="flex flex-col">
-          <div className="flex flex-col items-center">
-            <div>
-              <h1>Unlimited movies, TV shows, and more</h1>
+        <main className="flex flex-1 flex-col justify-center text-center">
+          <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col gap-4">
+              <h1 className="leading-18 tracking-wide">
+                Unlimited movies, <br /> TV shows, and <br /> more
+              </h1>
               <h4>Starts at BRL 20.90. Cancel anytime.</h4>
             </div>
 
