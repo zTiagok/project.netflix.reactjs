@@ -6,7 +6,7 @@ type AboutCardProps = {
 
 export default function AboutCard(props: AboutCardProps) {
   return (
-    <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl border-2 border-neutral-800 bg-neutral-800/50 p-4">
+    <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl border-neutral-800 bg-linear-to-br from-[#192247] to-[#210e17] p-4">
       <div className="flex flex-col gap-2">
         <h5 className="font-bold">{props.title}</h5>
         <span className="font-medium text-neutral-400">
