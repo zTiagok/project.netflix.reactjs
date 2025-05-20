@@ -6,6 +6,7 @@ import ReadyToWatch from "~/components/ReadyToWatch";
 import type { Route } from "../../+types/root";
 
 import Logo from "~/assets/logo.png";
+import PopcornIcon from "~/assets/popcorn.icon";
 import CommonData from "~/data/common.data.json";
 
 export function meta({}: Route.MetaArgs) {
@@ -48,13 +49,20 @@ export default function Home() {
       </div>
 
       <div className="px-38">
-        <section className="flex items-center justify-between">
-          <div className="flex flex-col">
-            <h4>The Netflix you love for just BRL 20.90.</h4>
-            <h5>Enjoy savings and Netflix with a few ad breaks.</h5>
+        <section className="flex items-center gap-6">
+          <div className="w-fit">
+            <PopcornIcon />
           </div>
+          <div className="r-8 flex h-full w-full items-center justify-between rounded-2xl bg-linear-to-r from-[#482566]/50 to-[#161d52]/50 px-6 py-4 transition hover:from-[#482566]/100 hover:to-[#161d52]/100">
+            <div className="flex flex-col -space-y-2">
+              <h4>The Netflix you love for just BRL 20.90.</h4>
+              <h5>Get our most affordable, ad-supported plan.</h5>
+            </div>
 
-          <button>Learn More</button>
+            <button className="rounded-md bg-neutral-600/80 px-4 py-2 transition-colors hover:cursor-pointer hover:bg-neutral-600/50 active:opacity-80">
+              Learn More
+            </button>
+          </div>
         </section>
 
         <section className="flex flex-col">
