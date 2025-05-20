@@ -49,8 +49,8 @@ export default function Home() {
       </div>
 
       <div className="px-38">
-        <section className="group flex items-center gap-6 transition-transform hover:scale-105">
-          <div className="w-fit">
+        <section className="group flex items-center transition-transform hover:scale-105">
+          <div className="flex w-fit scale-75 items-center justify-center">
             <PopcornIcon />
           </div>
           <div className="r-8 flex h-full w-full items-center justify-between rounded-2xl bg-linear-to-r from-[#482566]/50 to-[#161d52]/50 px-6 py-4 transition group-hover:from-[#482566]/100 group-hover:to-[#161d52]/100">
