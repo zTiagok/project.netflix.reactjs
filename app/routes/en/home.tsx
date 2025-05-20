@@ -49,11 +49,11 @@ export default function Home() {
       </div>
 
       <div className="px-38">
-        <section className="flex items-center gap-6">
+        <section className="group flex items-center gap-6 transition-transform hover:scale-105">
           <div className="w-fit">
             <PopcornIcon />
           </div>
-          <div className="r-8 flex h-full w-full items-center justify-between rounded-2xl bg-linear-to-r from-[#482566]/50 to-[#161d52]/50 px-6 py-4 transition hover:from-[#482566]/100 hover:to-[#161d52]/100">
+          <div className="r-8 flex h-full w-full items-center justify-between rounded-2xl bg-linear-to-r from-[#482566]/50 to-[#161d52]/50 px-6 py-4 transition group-hover:from-[#482566]/100 group-hover:to-[#161d52]/100">
             <div className="flex flex-col -space-y-2">
               <h4>The Netflix you love for just BRL 20.90.</h4>
               <h5>Get our most affordable, ad-supported plan.</h5>
