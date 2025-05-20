@@ -27,6 +27,10 @@ h5 {
   @apply text-lg;
 }
 
+button {
+  @apply select-none;
+}
+
 html,
 body {
   @apply bg-white dark:bg-gray-950;
