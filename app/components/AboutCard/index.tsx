@@ -1,7 +1,14 @@
+enum IconNames {
+  TV = 0,
+  ArrowBubble = 1,
+  Telescope = 2,
+  Buddies = 3,
+}
+
 type AboutCardProps = {
   title: string;
   description: string;
-  icon: React.ReactElement;
+  icon: IconNames;
 };
 
 export default function AboutCard(props: AboutCardProps) {
@@ -13,8 +20,6 @@ export default function AboutCard(props: AboutCardProps) {
           {props.description}
         </span>
       </div>
-
-      {props.icon}
     </div>
   );
 }

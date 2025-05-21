@@ -1,30 +1,35 @@
-import { TVIcon } from "~/components/Icons";
+export enum IconNames {
+  TV = 0,
+  ArrowBubble = 1,
+  Telescope = 2,
+  Buddies = 3,
+}
 
-const data = {
+const common = {
   information_cards: [
     {
       title: "Enjoy on your TV",
       description:
         "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
-      icon: <TVIcon />,
+      icon: IconNames.TV,
     },
     {
       title: "Download your shows to watch offline",
       description:
         "Save your favorites easily and always have something to watch.",
-      icon: <TVIcon />,
+      icon: IconNames.ArrowBubble,
     },
     {
       title: "Watch everywhere",
       description:
         "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.",
-      icon: <TVIcon />,
+      icon: IconNames.Telescope,
     },
     {
       title: "Create profiles for kids",
       description:
         "Send kids on adventures with their favorite characters in a space made just for them — free with your membership.",
-      icon: <TVIcon />,
+      icon: IconNames.Buddies,
     },
   ],
   frequent_questions: [
@@ -140,4 +145,4 @@ const data = {
   ],
 };
 
-export default data;
+export default common;

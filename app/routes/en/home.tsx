@@ -7,7 +7,7 @@ import type { Route } from "../../+types/root";
 
 import Logo from "~/assets/logo.png";
 import { PopcornIcon } from "~/components/Icons";
-import data from "~/data/common.data";
+import { common } from "~/data/index";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -77,7 +77,7 @@ export default function Home() {
         <article className="flex flex-col">
           <h3>More Reasons to Join</h3>
           <div className="flex h-48 gap-3">
-            {data.information_cards.map((data, index) => (
+            {common.information_cards.map((data, index) => (
               <AboutCard
                 title={data.title}
                 description={data.description}
@@ -90,7 +90,7 @@ export default function Home() {
 
         <article className="flex flex-col gap-2">
           <h3>Frequently Asked Questions</h3>
-          {data.frequent_questions.map((data, index) => (
+          {common.frequent_questions.map((data, index) => (
             <DetailsDropdown
               title={data.title}
               key={`frequently-questions-${index}`}
@@ -113,7 +113,7 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-4 grid-rows-5 gap-3 select-none [&>*]:w-fit [&>*]:cursor-pointer [&>*]:underline">
-            {data.footer_hiperlinks.map((data, index) => (
+            {common.footer_hiperlinks.map((data, index) => (
               <span key={`footer-hiperlink-${index}`}> {data.name} </span>
             ))}
           </div>
