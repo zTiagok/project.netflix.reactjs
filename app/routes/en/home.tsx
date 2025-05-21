@@ -6,7 +6,7 @@ import ReadyToWatch from "~/components/ReadyToWatch";
 import type { Route } from "../../+types/root";
 
 import Logo from "~/assets/logo.png";
-import PopcornIcon from "~/assets/popcorn.icon";
+import PopcornIcon from "~/components/Icons/PopcornIcon";
 import data from "~/data/common.data";
 
 export function meta({}: Route.MetaArgs) {

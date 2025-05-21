@@ -1,4 +1,4 @@
-import TVIcon from "~/assets/tv.icon";
+import TVIcon from "~/components/Icons/TVIcon";
 
 const data = {
   information_cards: [
