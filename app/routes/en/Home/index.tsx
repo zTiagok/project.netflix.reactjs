@@ -1,12 +1,11 @@
+import type { Route } from ".react-router/types/app/+types/root";
+import Logo from "~/assets/logo.png";
 import AboutCard from "~/components/AboutCard";
 import DetailsDropdown from "~/components/DetailsDropdown";
+import { PopcornIcon } from "~/components/Icons";
 import LanguageDropdown from "~/components/LanguageDropdown";
 import MovieCard from "~/components/MovieCard";
 import ReadyToWatch from "~/components/ReadyToWatch";
-import type { Route } from "../../+types/root";
-
-import Logo from "~/assets/logo.png";
-import { PopcornIcon } from "~/components/Icons";
 import { common } from "~/data/index";
 
 export function meta({}: Route.MetaArgs) {
