@@ -1,4 +1,5 @@
-import type { IconNames } from "~/data";
+import { IconNames } from "~/data";
+import { ArrowBubbleIcon, BuddiesIcon, TelescopeIcon, TVIcon } from "../Icons";
 
 type AboutCardProps = {
   title: string;
@@ -6,14 +7,23 @@ type AboutCardProps = {
   icon: IconNames;
 };
 
+const iconMap = {
+  [IconNames.TV]: <TVIcon />,
+  [IconNames.ArrowBubble]: <ArrowBubbleIcon />,
+  [IconNames.Telescope]: <TelescopeIcon />,
+  [IconNames.Buddies]: <BuddiesIcon />,
+};
+
 export default function AboutCard(props: AboutCardProps) {
   return (
     <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl border-neutral-800 bg-linear-to-br from-[#192247] to-[#210e17] p-4">
-      <div className="flex flex-col gap-2">
-        <h5 className="font-bold">{props.title}</h5>
-        <span className="font-medium text-neutral-400">
-          {props.description}
-        </span>
+      <div className="flex h-full flex-col justify-between gap-2">
+        <div className="space-y-2">
+          <p className="text-2xl">{props.title}</p>
+          <p className="leading-tight text-neutral-400">{props.description}</p>
+        </div>
+
+        <div className="self-end">{iconMap[props.icon]}</div>
       </div>
     </div>
   );

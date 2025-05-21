@@ -75,7 +75,7 @@ export default function Home() {
 
         <article className="flex flex-col">
           <h3>More Reasons to Join</h3>
-          <div className="flex h-48 gap-3">
+          <div className="flex h-64 gap-4">
             {common.information_cards.map((data, index) => (
               <AboutCard
                 title={data.title}
