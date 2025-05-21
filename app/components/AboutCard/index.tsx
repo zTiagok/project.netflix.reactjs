@@ -1,9 +1,4 @@
-enum IconNames {
-  TV = 0,
-  ArrowBubble = 1,
-  Telescope = 2,
-  Buddies = 3,
-}
+import type { IconNames } from "~/data";
 
 type AboutCardProps = {
   title: string;
