@@ -1,7 +1,7 @@
 type AboutCardProps = {
   title: string;
   description: string;
-  image: string;
+  icon: React.ReactElement;
 };
 
 export default function AboutCard(props: AboutCardProps) {
@@ -14,7 +14,7 @@ export default function AboutCard(props: AboutCardProps) {
         </span>
       </div>
 
-      <img src={props.image || undefined} alt="Image" className="self-end" />
+      {props.icon}
     </div>
   );
 }

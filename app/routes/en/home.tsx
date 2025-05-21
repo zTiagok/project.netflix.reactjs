@@ -7,7 +7,7 @@ import type { Route } from "../../+types/root";
 
 import Logo from "~/assets/logo.png";
 import PopcornIcon from "~/assets/popcorn.icon";
-import CommonData from "~/data/common.data.json";
+import data from "~/data/common.data";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -49,7 +49,7 @@ export default function Home() {
       </div>
 
       <div className="px-38">
-        <section className="group flex items-center transition-transform hover:scale-105">
+        <section className="group flex items-center transition-transform duration-400 hover:scale-105">
           <div className="flex w-fit scale-75 items-center justify-center">
             <PopcornIcon />
           </div>
@@ -77,11 +77,11 @@ export default function Home() {
         <article className="flex flex-col">
           <h3>More Reasons to Join</h3>
           <div className="flex h-48 gap-3">
-            {CommonData["information-cards"].map((data, index) => (
+            {data.information_cards.map((data, index) => (
               <AboutCard
                 title={data.title}
                 description={data.description}
-                image={data.image}
+                icon={data.icon}
                 key={index}
               />
             ))}
@@ -90,7 +90,7 @@ export default function Home() {
 
         <article className="flex flex-col gap-2">
           <h3>Frequently Asked Questions</h3>
-          {CommonData["frequent-questions"].map((data, index) => (
+          {data.frequent_questions.map((data, index) => (
             <DetailsDropdown
               title={data.title}
               key={`frequently-questions-${index}`}
@@ -113,7 +113,7 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-4 grid-rows-5 gap-3 select-none [&>*]:w-fit [&>*]:cursor-pointer [&>*]:underline">
-            {CommonData["footer-hiperlinks"].map((data, index) => (
+            {data.footer_hiperlinks.map((data, index) => (
               <span key={`footer-hiperlink-${index}`}> {data.name} </span>
             ))}
           </div>
