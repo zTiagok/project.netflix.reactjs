@@ -1,8 +1,11 @@
 # Netflix Replica
 
 <div align="center">
+
 ![Stack](https://img.shields.io/badge/Stack-Frontend-teal?style=for-the-badge) ![Status](https://img.shields.io/badge/status-Work%20in%20Progress-yellow?style=for-the-badge) ![Contribuições](https://img.shields.io/github/contributors/zTiagok/project.netflix.reactjs?style=for-the-badge) ![Tamanho do repositório](https://img.shields.io/github/repo-size/zTiagok/project.netflix.reactjs?style=for-the-badge) ![Último commit](https://img.shields.io/github/last-commit/zTiagok/project.netflix.reactjs?style=for-the-badge)
+
 </div>
+
 ## 📋 Content
 
 1. [About](#-about)
