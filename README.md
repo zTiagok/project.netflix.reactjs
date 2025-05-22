@@ -15,10 +15,12 @@
 1. [Media](#️-media)
 1. [References](#-references)
 1. [Contributing](#-contributing)
+   <br />
 
 ## ℹ️ About
 
 This project aims to develop a functional **front-end replica** of the Netflix streaming platform, built with ReactJS and TailwindCSS, based in the user interface of the Microsoft Edge browser.
+<br />
 
 ## ✅ Goals
 
@@ -30,6 +32,7 @@ This project aims to develop a functional **front-end replica** of the Netflix s
   - [ ] Registration page (UI only)
 - [ ] Support English and Portuguese languages
 - [ ] Project documentation completed and updated
+      <br />
 
 ## 📦 Built With
 
@@ -41,6 +44,8 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 | TailwindCSS  | 4.0.0   | [About]("https://tailwindcss.com/docs/installation/using-vite")                           |
 | Typescript   | 5.7.2   | [About]("https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-7.html") |
 | Lucide React | 0.511.0 | [About]("https://lucide.dev/guide/packages/lucide-react")                                 |
+
+<br />
 
 ## 📥 Installation
 
@@ -68,6 +73,8 @@ This project aims to develop a functional **front-end replica** of the Netflix s
   npm run start
 ```
 
+<br />
+
 ## 🖼️ Media
 
 ##### References (Microsoft Edge Version)
@@ -89,10 +96,12 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 ![Landing](./references/registration.png)
 
 </details>
+<br />
 
 ## 📚 References
 
 - [Netflix](https://www.netflix.com/br-en/)
+  <br />
 
 ## 💡 Contributing
 
