@@ -20,6 +20,7 @@
 ## ℹ️ About
 
 This project aims to develop a functional **front-end replica** of the Netflix streaming platform, built with ReactJS and TailwindCSS, based in the user interface of the Microsoft Edge browser.
+
 <br />
 
 ## ✅ Goals
@@ -32,7 +33,8 @@ This project aims to develop a functional **front-end replica** of the Netflix s
   - [ ] Registration page (UI only)
 - [ ] Support English and Portuguese languages
 - [ ] Project documentation completed and updated
-      <br />
+
+<br />
 
 ## 📦 Built With
 
@@ -96,12 +98,14 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 ![Landing](./references/registration.png)
 
 </details>
+
 <br />
 
 ## 📚 References
 
 - [Netflix](https://www.netflix.com/br-en/)
-  <br />
+
+<br />
 
 ## 💡 Contributing
 
