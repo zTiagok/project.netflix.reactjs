@@ -42,14 +42,14 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 
 ## 📦 Built With
 
-| Technology   | Version | Reference                                                                               |
-| ------------ | ------- | --------------------------------------------------------------------------------------- |
-| React        | 19.0.0  | [About](https://react.dev/blog/2024/12/05/react-19)                                     |
-| React Router | 7.2.0   | [About](https://reactrouter.com/7.2.0/home)                                             |
-| Vite         | 5.4.11  | [About](https://vite.dev/guide/)                                                        |
-| TailwindCSS  | 4.0.0   | [About](https://tailwindcss.com/docs/installation/using-vite)                           |
+| Technology   | Version |                                        Reference                                        |
+| ------------ | ------- | :-------------------------------------------------------------------------------------: |
+| React        | 19.0.0  |                   [About](https://react.dev/blog/2024/12/05/react-19)                   |
+| React Router | 7.2.0   |                       [About](https://reactrouter.com/7.2.0/home)                       |
+| Vite         | 5.4.11  |                            [About](https://vite.dev/guide/)                             |
+| TailwindCSS  | 4.0.0   |              [About](https://tailwindcss.com/docs/installation/using-vite)              |
 | Typescript   | 5.7.2   | [About](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-7.html) |
-| Lucide React | 0.511.0 | [About](https://lucide.dev/guide/packages/lucide-react)                                 |
+| Lucide React | 0.511.0 |                 [About](https://lucide.dev/guide/packages/lucide-react)                 |
 
 <br />
 
