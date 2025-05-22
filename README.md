@@ -74,15 +74,20 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 
 <details>
   <summary>Landing Page</summary>
+  
   ![Landing](./references/landing.png)
 </details>
 <details>
   <summary>Login Page</summary>
-  ![Landing](./references/login.png)
+
+![Landing](./references/login.png)
+
 </details>
 <details>
   <summary>Registration Page</summary>
-  ![Landing](./references/registration.png)
+
+![Landing](./references/registration.png)
+
 </details>
 
 ## 📚 References
