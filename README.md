@@ -15,7 +15,8 @@
 1. [Media](#️-media)
 1. [References](#-references)
 1. [Contributing](#-contributing)
-   <br />
+
+<br />
 
 ## ℹ️ About
 
