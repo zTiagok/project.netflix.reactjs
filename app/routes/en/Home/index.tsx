@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <div className="h-full bg-neutral-950 pb-24">
       <div
-        className={`absolute inset-0 h-screen bg-[url(/app/assets/landing_background.jpg)] opacity-20`}
+        className={`absolute inset-0 h-[90vh] bg-[url(/app/assets/landing_background.jpg)] opacity-20`}
       />
 
-      <div className="relative flex h-screen flex-col bg-linear-to-b from-black/75 from-10% to-transparent to-20% px-38">
+      <div className="relative flex h-[90vh] flex-col bg-linear-to-b from-black/75 from-10% to-transparent to-20% px-38">
         <header className="clear-start flex items-center justify-between py-6">
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
@@ -45,6 +45,10 @@ export default function Home() {
             <ReadyToWatch />
           </div>
         </main>
+      </div>
+
+      <div className="-mt-16 h-16 w-full overflow-hidden">
+        <div className="flex h-full w-full rounded-t-[60%] bg-gradient-to-t from-pink-600 to-red-500 before:relative before:top-1 before:flex-1 before:rounded-t-[50%] before:bg-radial-[at_50%_00%] before:from-indigo-900 before:to-neutral-950 before:to-50% before:content-['']" />
       </div>
 
       <div className="px-38">
