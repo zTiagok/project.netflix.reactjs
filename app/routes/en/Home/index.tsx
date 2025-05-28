@@ -51,7 +51,7 @@ export default function Home() {
         <div className="flex h-full w-full rounded-t-[60%] bg-gradient-to-t from-pink-600 to-red-500 before:relative before:top-1 before:flex-1 before:rounded-t-[50%] before:bg-radial-[at_50%_00%] before:from-indigo-900 before:to-neutral-950 before:to-50% before:content-['']" />
       </div>
 
-      <div className="px-38">
+      <div className="flex flex-col gap-16 px-38">
         <section className="group flex items-center transition-transform duration-400 hover:scale-105">
           <div className="flex w-fit scale-75 items-center justify-center">
             <PopcornIcon />
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col">
+        <section className="flex flex-col gap-6">
           <h3>Trending Now</h3>
           <div className="flex h-[36vh] gap-4">
             {Array.from({ length: 5 }).map((_data, index) => (
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </section>
 
-        <article className="flex flex-col">
+        <article className="flex flex-col gap-6">
           <h3>More Reasons to Join</h3>
           <div className="flex h-64 gap-4">
             {common.information_cards.map((data, index) => (
@@ -91,18 +91,20 @@ export default function Home() {
           </div>
         </article>
 
-        <article className="flex flex-col gap-2">
+        <article className="flex flex-col gap-4">
           <h3>Frequently Asked Questions</h3>
-          {common.frequent_questions.map((data, index) => (
-            <DetailsDropdown
-              title={data.title}
-              key={`frequently-questions-${index}`}
-            >
-              <p>{data.phrase_1}</p>
-              {data.phrase_2 && <br />}
-              <p>{data.phrase_2}</p>
-            </DetailsDropdown>
-          ))}
+          <div className="flex flex-col gap-2">
+            {common.frequent_questions.map((data, index) => (
+              <DetailsDropdown
+                title={data.title}
+                key={`frequently-questions-${index}`}
+              >
+                <p>{data.phrase_1}</p>
+                {data.phrase_2 && <br />}
+                <p>{data.phrase_2}</p>
+              </DetailsDropdown>
+            ))}
+          </div>
         </article>
 
         <ReadyToWatch />
