@@ -47,6 +47,7 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 | TailwindCSS  |  4.0.0  |              [About](https://tailwindcss.com/docs/installation/using-vite)              |
 | Typescript   |  5.7.2  | [About](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-7.html) |
 | Lucide React | 0.511.0 |                 [About](https://lucide.dev/guide/packages/lucide-react)                 |
+| Swiper       | 11.2.8  |                        [About](https://swiperjs.com/swiper-api)                         |
 
 <br />
 
