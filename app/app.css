@@ -39,3 +39,15 @@ body {
     color-scheme: dark;
   }
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply absolute flex items-center justify-center rounded-lg bg-neutral-500 px-1 py-8 text-white;
+}
+
+.swiper-button-disabled {
+  @apply bg-transparent;
+}
+.swiper-button-disabled:after {
+  @apply opacity-0;
+}

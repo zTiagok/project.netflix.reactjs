@@ -1,10 +1,10 @@
 import type { Route } from ".react-router/types/app/+types/root";
 import Logo from "~/assets/logo.png";
 import AboutCard from "~/components/AboutCard";
+import Carousel from "~/components/Carousel";
 import DetailsDropdown from "~/components/DetailsDropdown";
 import { PopcornIcon } from "~/components/Icons";
 import LanguageDropdown from "~/components/LanguageDropdown";
-import MovieCard from "~/components/MovieCard";
 import ReadyToWatch from "~/components/ReadyToWatch";
 import { common } from "~/data/index";
 
@@ -70,10 +70,8 @@ export default function Home() {
 
         <section className="flex flex-col gap-2">
           <h3>Trending Now</h3>
-          <div className="flex h-[36vh] gap-4 p-4">
-            {Array.from({ length: 5 }).map((_data, index) => (
-              <MovieCard id={index} key={`movie-card-${index}`} />
-            ))}
+          <div className="flex h-[24vh]">
+            <Carousel />
           </div>
         </section>
 
