@@ -68,9 +68,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-6">
+        <section className="flex flex-col gap-2">
           <h3>Trending Now</h3>
-          <div className="flex h-[36vh] gap-4">
+          <div className="flex h-[36vh] gap-4 p-4">
             {Array.from({ length: 5 }).map((_data, index) => (
               <MovieCard id={index} key={`movie-card-${index}`} />
             ))}
