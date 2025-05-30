@@ -51,3 +51,7 @@ body {
 .swiper-button-disabled:after {
   @apply opacity-0;
 }
+
+.swiper-slide {
+  @apply py-4;
+}

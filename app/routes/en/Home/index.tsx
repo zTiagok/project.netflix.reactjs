@@ -70,7 +70,7 @@ export default function Home() {
 
         <section className="flex flex-col gap-2">
           <h3>Trending Now</h3>
-          <div className="flex h-[24vh]">
+          <div className="flex h-[26vh]">
             <Carousel />
           </div>
         </section>
