@@ -1,4 +1,4 @@
-# Netflix Replica
+# 🍿 Netflix Replica
 
 <div align="center">
 
@@ -87,6 +87,11 @@ This project aims to develop a functional **front-end replica** of the Netflix s
   <summary>Landing Page</summary>
   
   ![Landing](./references/landing.png)
+</details>
+<details>
+  <summary>Dialog</summary>
+  
+  ![Landing](./references/dialog.png)
 </details>
 <details>
   <summary>Login Page</summary>
