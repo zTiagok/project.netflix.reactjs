@@ -22,7 +22,7 @@ export default function Carousel() {
         </SwiperSlide>
       ))} */}
       {common.movie_cards.map((data, index) => (
-        <SwiperSlide className="overflow-visible" key={`movie-card-${index}`}>
+        <SwiperSlide className="" key={`movie-card-${index}`}>
           <MovieCard movie={data} id={index} key={`movie-card-${index}`} />
         </SwiperSlide>
       ))}
