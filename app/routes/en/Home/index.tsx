@@ -1,4 +1,5 @@
 import type { Route } from ".react-router/types/app/+types/root";
+import { useNavigate } from "react-router";
 import Logo from "~/assets/logo.png";
 import AboutCard from "~/components/AboutCard";
 import Carousel from "~/components/Carousel";
@@ -16,6 +17,8 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="h-full bg-neutral-950 pb-24">
       <div
@@ -27,7 +30,10 @@ export default function Home() {
           <img src={Logo} alt="Netflix" className="w-[10vw]" />
           <div className="flex gap-4">
             <LanguageDropdown currentLanguage="English" />
-            <button className="cursor-pointer rounded-md bg-red-600 px-4 transition-colors hover:bg-red-700 active:bg-red-900">
+            <button
+              className="cursor-pointer rounded-md bg-red-600 px-4 transition-colors hover:bg-red-700 active:bg-red-900"
+              onClick={() => navigate("/en/login")}
+            >
               Sign In
             </button>
           </div>
