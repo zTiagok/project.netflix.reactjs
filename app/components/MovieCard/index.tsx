@@ -31,7 +31,7 @@ export default function MovieCard(props: MovieCardProps) {
       style={{ backgroundImage: `url(${props.movie.thumbnail})` }}
     >
       <div
-        className={`relative -left-6 flex w-fit items-center justify-center text-[86px] font-[1000] text-white select-none before:absolute before:flex-1 before:text-[79px] before:text-black before:content-[attr(data-number)]`}
+        className={`text-shadow-carousel relative -left-6 flex w-fit items-center justify-center text-[86px] font-[1000] text-black select-none`}
         data-number={props.id + 1}
       >
         {props.id + 1}

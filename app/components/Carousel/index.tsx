@@ -16,11 +16,6 @@ export default function Carousel() {
       modules={[Navigation]}
       className="rounded-md"
     >
-      {/* {Array.from({ length: 10 }).map((_data, index) => (
-        <SwiperSlide className="overflow-visible" key={`movie-card-${index}`}>
-          <MovieCard id={index} key={`movie-card-${index}`} />
-        </SwiperSlide>
-      ))} */}
       {common.movie_cards.map((data, index) => (
         <SwiperSlide className="" key={`movie-card-${index}`}>
           <MovieCard movie={data} id={index} key={`movie-card-${index}`} />
