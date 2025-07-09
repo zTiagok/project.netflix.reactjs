@@ -1,11 +1,13 @@
 import { ChevronRight } from "lucide-react";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router";
 
 interface FormInterface {
   email: string;
 }
 
 export default function ReadyToWatch() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -13,7 +15,7 @@ export default function ReadyToWatch() {
   } = useForm<FormInterface>();
 
   const onSubmit: SubmitHandler<FormInterface> = (data) => {
-    console.log(data);
+    navigate("/en/sign-up");
   };
 
   return (
