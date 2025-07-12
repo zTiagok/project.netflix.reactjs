@@ -1,7 +1,10 @@
 import type { Route } from ".react-router/types/app/+types/root";
 import { TriangleAlert } from "lucide-react";
+import { useEffect } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router";
 import Logo from "~/assets/logo.png";
+import { useUserStore } from "~/store";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,6 +18,15 @@ interface FormInterface {
 }
 
 export default function SignUp() {
+  const navigate = useNavigate();
+  const userEmail = useUserStore((state) => state.email);
+
+  useEffect(() => {
+    if (!userEmail) {
+      navigate("/en/home");
+    }
+  }, [userEmail]);
+
   const {
     register,
     handleSubmit,
@@ -56,7 +68,7 @@ export default function SignUp() {
         <div className="flex flex-col gap-4">
           <div>
             <p>Email</p>
-            <b>EMAIL AQUI!</b>
+            <b>{userEmail}</b>
           </div>
 
           <input

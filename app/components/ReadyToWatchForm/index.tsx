@@ -1,12 +1,14 @@
 import { ChevronRight } from "lucide-react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router";
+import { useUserStore } from "~/store";
 
 interface FormInterface {
   email: string;
 }
 
 export default function ReadyToWatchForm() {
+  const setUserEmail = useUserStore((state) => state.setEmail);
   const navigate = useNavigate();
   const {
     register,
@@ -15,6 +17,7 @@ export default function ReadyToWatchForm() {
   } = useForm<FormInterface>();
 
   const onSubmit: SubmitHandler<FormInterface> = (data) => {
+    setUserEmail(data.email);
     navigate("/en/sign-up");
   };
 
