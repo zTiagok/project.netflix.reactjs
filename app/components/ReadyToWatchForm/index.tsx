@@ -6,7 +6,7 @@ interface FormInterface {
   email: string;
 }
 
-export default function ReadyToWatch() {
+export default function ReadyToWatchForm() {
   const navigate = useNavigate();
   const {
     register,

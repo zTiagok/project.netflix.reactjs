@@ -6,7 +6,7 @@ import Carousel from "~/components/Carousel";
 import DetailsDropdown from "~/components/DetailsDropdown";
 import { PopcornIcon } from "~/components/Icons";
 import LanguageDropdown from "~/components/LanguageDropdown";
-import ReadyToWatch from "~/components/ReadyToWatch";
+import ReadyToWatchForm from "~/components/ReadyToWatchForm";
 import { common } from "~/data/index";
 
 export function meta({}: Route.MetaArgs) {
@@ -48,7 +48,7 @@ export default function Home() {
               <h4>Starts at BRL 20.90. Cancel anytime.</h4>
             </div>
 
-            <ReadyToWatch />
+            <ReadyToWatchForm />
           </div>
         </main>
       </div>
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </article>
 
-        <ReadyToWatch />
+        <ReadyToWatchForm />
 
         <footer className="flex flex-col gap-8 text-sm font-medium text-neutral-400">
           <p>
