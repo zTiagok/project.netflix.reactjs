@@ -36,7 +36,9 @@ export default function ReadyToWatchForm() {
           placeholder="Email address"
           {...register("email", {
             required: "Email is required.",
-            validate: (value) => value.includes("@") || "Email must be valid.",
+            validate: (value) =>
+              (value.includes("@") && value.includes(".")) ||
+              "Email must be valid.",
           })}
         />
         <button className="flex min-w-[200px] cursor-pointer items-center justify-center gap-2 rounded-sm bg-red-600 text-2xl text-white transition-colors hover:bg-red-700 active:bg-red-900">
@@ -45,7 +47,7 @@ export default function ReadyToWatchForm() {
         </button>
       </div>
       {errors.email && (
-        <span className="self-start text-sm text-red-600">
+        <span className="self-start text-sm text-red-400">
           {errors.email.message}
         </span>
       )}

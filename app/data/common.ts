@@ -73,7 +73,7 @@ const common = {
         "Kids profiles come with PIN-protected parental controls that let parents restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.",
     },
   ],
-  footer_hiperlinks: [
+  home_footer_hiperlinks: [
     {
       name: "FAQ",
       url: "",
@@ -140,6 +140,32 @@ const common = {
     },
     {
       name: "Only on Netflix",
+      url: "",
+    },
+  ],
+  signin_footer_hiperlinks: [
+    {
+      name: "FAQ",
+      url: "",
+    },
+    {
+      name: "Help Center",
+      url: "",
+    },
+    {
+      name: "Terms of Use",
+      url: "",
+    },
+    {
+      name: "Privacy",
+      url: "",
+    },
+    {
+      name: "Cookie Preferences",
+      url: "",
+    },
+    {
+      name: "Corporate Information",
       url: "",
     },
   ],

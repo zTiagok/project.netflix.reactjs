@@ -122,7 +122,7 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-4 grid-rows-5 gap-3 select-none [&>*]:w-fit [&>*]:cursor-pointer [&>*]:underline">
-            {common.footer_hiperlinks.map((data, index) => (
+            {common.home_footer_hiperlinks.map((data, index) => (
               <span key={`footer-hiperlink-${index}`}> {data.name} </span>
             ))}
           </div>

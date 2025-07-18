@@ -2,7 +2,7 @@ import { ChevronDown, Languages } from "lucide-react";
 import { useRef } from "react";
 
 type LanguageDropdownProps = {
-  currentLanguage: "English" | "Portuguese";
+  currentLanguage?: "English" | "Portuguese";
 };
 
 export default function LanguageDropdown({
