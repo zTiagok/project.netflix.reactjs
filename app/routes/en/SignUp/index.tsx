@@ -1,12 +1,13 @@
 import type { Route } from ".react-router/types/app/+types/root";
-import type { JSX } from "react";
+import { useEffect, type JSX } from "react";
 import { useNavigate } from "react-router";
 import Logo from "~/assets/logo.png";
 import LanguageDropdown from "~/components/LanguageDropdown";
 import { common } from "~/data";
-import { useSignUpStore } from "~/store";
-import StepForm from "./StepForm";
+import { useSignUpStore, useUserStore } from "~/store";
+import StepFour from "./StepFour";
 import StepOne from "./StepOne";
+import StepThree from "./StepThree";
 import StepTwo from "./StepTwo";
 
 export function meta({}: Route.MetaArgs) {
@@ -18,16 +19,40 @@ export function meta({}: Route.MetaArgs) {
 
 export default function SignUp() {
   const navigate = useNavigate();
-  const step = useSignUpStore((state) => state.step);
+  const { step, setStep } = useSignUpStore((state) => state);
+  const { email, setEmail } = useUserStore((state) => state);
+
+  useEffect(() => {
+    setStep(1);
+
+    if (!email) {
+      navigate("/en/home");
+    }
+  }, []);
 
   const onLogoClick = () => {
     navigate("/en/home");
   };
 
+  const onButtonClick = () => {
+    setStep(step + 1);
+
+    if (step === 4) {
+      alert("Continuar com páginas da Netflix");
+    }
+  };
+
   const stepRenderer: Record<number, JSX.Element> = {
-    0: <StepForm />,
-    1: <StepOne />,
-    2: <StepTwo />,
+    1: <StepOne email={email} onButtonClick={onButtonClick} />,
+    2: <StepTwo email={email} onButtonClick={onButtonClick} />,
+    3: (
+      <StepThree
+        email={email}
+        setEmail={setEmail}
+        onButtonClick={onButtonClick}
+      />
+    ),
+    4: <StepFour email={email} onButtonClick={onButtonClick} />,
   };
 
   return (
@@ -41,7 +66,7 @@ export default function SignUp() {
         </button>
       </header>
 
-      <div className="flex-1">{stepRenderer[step]}</div>
+      <div className="flex flex-1 justify-center">{stepRenderer[step]}</div>
 
       <footer className="flex w-full flex-col justify-between border-t border-gray-200 bg-gray-100 px-24 py-8 pb-4 text-gray-500">
         <p className="pb-8"> Questions? Call 0000 000 0000</p>
