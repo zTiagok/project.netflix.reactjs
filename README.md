@@ -57,7 +57,7 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 1. Clone the repository
 
 ```bash
-  git clone https://github.com/zTiagok/project.netflix.reactjs
+  git clone https://www.github.com/zTiagok/project.netflix.reactjs
 ```
 
 2. Access the repository folder
@@ -117,4 +117,4 @@ This project aims to develop a functional **front-end replica** of the Netflix s
 
 ## 💡 Contributing
 
-Feel free to open an [issue](https://github.com/zTiagok/project.netflix.reactjs/issues) if you have any suggestions, ideas or improvements for this project.
+Feel free to open an [issue](https://www.github.com/zTiagok/project.netflix.reactjs/issues) if you have any suggestions, ideas or improvements for this project.

@@ -13,7 +13,7 @@ import StepTwo from "./StepTwo";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Netflix - Sign Up" },
-    { name: "description", content: "https://github.com/zTiagok" },
+    { name: "description", content: "https://www.github.com/zTiagok" },
   ];
 }
 

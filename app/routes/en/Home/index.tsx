@@ -12,7 +12,7 @@ import { common } from "~/data/index";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Netflix - Watch TV Shows Online" },
-    { name: "description", content: "https://github.com/zTiagok" },
+    { name: "description", content: "https://www.github.com/zTiagok" },
   ];
 }
 
@@ -134,12 +134,12 @@ export default function Home() {
             <p>
               Visit{" "}
               <a
-                href="https://github.com/zTiagok"
+                href="https://www.github.com/zTiagok"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="cursor-pointer underline"
               >
-                https://github.com/zTiagok
+                https://www.github.com/zTiagok
               </a>{" "}
               for more details.
             </p>

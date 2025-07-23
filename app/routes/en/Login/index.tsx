@@ -3,7 +3,7 @@ import type { Route } from ".react-router/types/app/+types/root";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Netflix - Login" },
-    { name: "description", content: "https://github.com/zTiagok" },
+    { name: "description", content: "https://www.github.com/zTiagok" },
   ];
 }
 
