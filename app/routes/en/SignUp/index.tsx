@@ -5,6 +5,7 @@ import Logo from "~/assets/logo.png";
 import LanguageDropdown from "~/components/LanguageDropdown";
 import { common } from "~/data";
 import { useSignUpStore, useUserStore } from "~/store";
+import StepFive from "./StepFive";
 import StepFour from "./StepFour";
 import StepOne from "./StepOne";
 import StepThree from "./StepThree";
@@ -36,10 +37,6 @@ export default function SignUp() {
 
   const onButtonClick = () => {
     setStep(step + 1);
-
-    if (step === 4) {
-      alert("Continuar com páginas da Netflix");
-    }
   };
 
   const stepRenderer: Record<number, JSX.Element> = {
@@ -53,6 +50,7 @@ export default function SignUp() {
       />
     ),
     4: <StepFour email={email} onButtonClick={onButtonClick} />,
+    5: <StepFive onButtonClick={onButtonClick} />,
   };
 
   return (
