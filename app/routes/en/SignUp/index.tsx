@@ -5,11 +5,12 @@ import Logo from "~/assets/logo.png";
 import LanguageDropdown from "~/components/LanguageDropdown";
 import { common } from "~/data";
 import { useSignUpStore, useUserStore } from "~/store";
-import StepFive from "./StepFive";
-import StepFour from "./StepFour";
-import StepOne from "./StepOne";
-import StepThree from "./StepThree";
-import StepTwo from "./StepTwo";
+import StepFive from "./Steps/StepFive";
+import StepFour from "./Steps/StepFour";
+import StepOne from "./Steps/StepOne";
+import StepSix from "./Steps/StepSix";
+import StepThree from "./Steps/StepThree";
+import StepTwo from "./Steps/StepTwo";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -51,6 +52,7 @@ export default function SignUp() {
     ),
     4: <StepFour email={email} onButtonClick={onButtonClick} />,
     5: <StepFive onButtonClick={onButtonClick} />,
+    6: <StepSix onButtonClick={onButtonClick} />,
   };
 
   return (
@@ -64,7 +66,9 @@ export default function SignUp() {
         </button>
       </header>
 
-      <div className="flex flex-1 justify-center">{stepRenderer[step]}</div>
+      <div className="flex w-full max-w-6xl flex-1 justify-center">
+        {stepRenderer[step]}
+      </div>
 
       <footer className="flex w-full flex-col justify-between border-t border-gray-200 bg-gray-100 px-24 py-8 pb-4 text-gray-500">
         <p className="pb-8"> Questions? Call 0000 000 0000</p>
