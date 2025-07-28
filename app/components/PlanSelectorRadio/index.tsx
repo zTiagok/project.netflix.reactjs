@@ -1,9 +1,10 @@
-import type { InputHTMLAttributes } from "react";
+import { type InputHTMLAttributes } from "react";
 
 interface PlanSelectorRadioProps extends InputHTMLAttributes<HTMLInputElement> {
+  id: string;
   title: string;
   subtitle: string;
-  value: string;
+  planValue: string;
   quality: string;
   resolution: string;
   supported_devices: string;
@@ -14,9 +15,10 @@ interface PlanSelectorRadioProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export default function PlanSelectorRadio({
+  id,
   title,
   subtitle,
-  value,
+  planValue,
   quality,
   resolution,
   supported_devices,
@@ -34,15 +36,21 @@ export default function PlanSelectorRadio({
   );
 
   return (
-    <label className="flex flex-col gap-4 rounded-2xl border border-gray-300 p-2">
-      <input name="plan-radio" type="radio" className="hidden" {...props} />
+    <label className="has-[input:checked]:shadow-radio-input flex cursor-pointer flex-col gap-4 rounded-2xl border border-gray-300 p-2 transition-all has-[input:checked]:border-gray-500">
+      <input
+        name="plan-radio"
+        type="radio"
+        className="hidden"
+        id={id}
+        {...props}
+      />
       <div className="flex flex-col items-start rounded-2xl bg-purple-500 px-4 py-2 font-bold text-white">
         <p>{title}</p>
         <p>{subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 grid-rows-8 gap-4 p-4">
-        {renderGridElement("Monthly price", value)}
+        {renderGridElement("Monthly price", planValue)}
         {renderGridElement("Video and sound quality", quality)}
         {renderGridElement("Resolution", resolution)}
         {spatial_audio &&

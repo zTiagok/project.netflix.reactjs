@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PlanSelectorRadio from "~/components/PlanSelectorRadio";
 
 interface StepSixInterface {
@@ -5,6 +6,7 @@ interface StepSixInterface {
 }
 
 export default function StepSix({ onButtonClick }: StepSixInterface) {
+  const [selectedInput, setSelectedInput] = useState<string>("1");
   return (
     <div className="flex h-[820px] w-full flex-col items-start justify-start gap-6 text-center">
       <div className="flex flex-col items-start">
@@ -18,6 +20,7 @@ export default function StepSix({ onButtonClick }: StepSixInterface) {
 
       <div className="grid w-full flex-1 grid-cols-3 grid-rows-1 gap-2 p-2">
         <PlanSelectorRadio
+          id="1"
           title="Standard with ads"
           subtitle="1080p"
           ads="Less than you might think"
@@ -26,10 +29,14 @@ export default function StepSix({ onButtonClick }: StepSixInterface) {
           resolution="1080 (Full HD)"
           simultaneous_devices="2"
           supported_devices="TV, computer, mobile phone, tablet"
-          value="BRL 20.90"
+          planValue="BRL 20.90"
+          value="1"
+          checked={selectedInput === "1"}
+          onChange={(event) => setSelectedInput(event.currentTarget.value)}
         />
 
         <PlanSelectorRadio
+          id="2"
           title="Standard"
           subtitle="1080p"
           ads="No ads"
@@ -38,10 +45,14 @@ export default function StepSix({ onButtonClick }: StepSixInterface) {
           resolution="1080 (Full HD)"
           simultaneous_devices="2"
           supported_devices="TV, computer, mobile phone, tablet"
-          value="BRL 20.90"
+          planValue="BRL 20.90"
+          value="2"
+          checked={selectedInput === "2"}
+          onChange={(event) => setSelectedInput(event.currentTarget.value)}
         />
 
         <PlanSelectorRadio
+          id="3"
           title="Premium"
           subtitle="4K + HDR"
           ads="No ads"
@@ -50,8 +61,11 @@ export default function StepSix({ onButtonClick }: StepSixInterface) {
           resolution="4K (Ultra HD) + HDR"
           simultaneous_devices="4"
           supported_devices="TV, computer, mobile phone, tablet"
-          value="BRL 59.90"
+          planValue="BRL 59.90"
           spatial_audio="Included"
+          value="3"
+          checked={selectedInput === "3"}
+          onChange={(event) => setSelectedInput(event.currentTarget.value)}
         />
       </div>
 

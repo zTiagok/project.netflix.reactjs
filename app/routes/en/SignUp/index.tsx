@@ -56,7 +56,7 @@ export default function SignUp() {
   };
 
   return (
-    <main className="flex h-screen flex-col items-center gap-8 bg-white text-slate-800">
+    <main className="flex h-full flex-col items-center gap-8 bg-white text-slate-800">
       <header className="flex max-h-[80px] w-full items-center justify-between border-b border-gray-400/30 px-14 py-6">
         <button className="cursor-pointer" onClick={onLogoClick}>
           <img src={Logo} className="max-h-[40px]" alt="Netflix" />
